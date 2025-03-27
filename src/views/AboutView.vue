@@ -1,7 +1,9 @@
-<template>
-    <div>
-      <h1>À propos</h1>
-      <p>Voici la page À propos.</p>
-    </div>
+<template lang="pug">
+  H2
+    a(href="https://www.linkedin.com/in/alexandre-le-bourch-945763203/") Mon LinkedIn
+  H2
+    a(href="https://github.com/A-lebourch/portfolio") Mon GitHub
+  H2
+    router-link(to="/portfolio") Retour Accueil 
 </template>
   
