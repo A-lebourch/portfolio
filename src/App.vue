@@ -1,9 +1,9 @@
-<template>
-  <nav>
-    <router-link to="/">Accueil</router-link>
-    <router-link to="/about">À propos</router-link>
-  </nav>
-  <router-view></router-view>
+<template lang="pug">
+  button(class="bg-red h-10 w-10") coucou
+  nav
+    router-link(to="/") Accueil
+    router-link(to="/about") À propos
+  router-view
 </template>
 
 <style>
