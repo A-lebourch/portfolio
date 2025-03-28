@@ -1,6 +1,11 @@
 <template lang="pug">
   div(style="display:flex; flex-direction:row;height: 98vh;")
     Sidebar(:items="menu")
+      a(href="https://www.linkedin.com/in/ton-profil" target="_blank")
+        h1(class="fa-brands fa-linkedin-in")
+      a(href="https://github.com/A-lebourch/portfolio" target="_blank")
+        h1(class="fa-brands fa-github")
+
     Page(titre="Alexandre Le Bourch")
       router-view
   
@@ -18,9 +23,9 @@ export default {
   data() {
     return {
       menu:[
-            { path: '/portfolio', component: 'HomeView' },
-            { path: '/portfolio/about', component: 'AboutView' },
-            { path: '/portfolio/test', component: 'TestView' }
+            { path: '/portfolio', name: 'Home'},
+            { path: '/portfolio/about', name: 'AboutView'},
+            { path: '/portfolio/test', name: 'TestView'}
           ]
     };
   },
