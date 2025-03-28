@@ -16,6 +16,38 @@
       p Lorem ipsum
       p Lorem ipsum
       p Lorem ipsum
+    ProjectSlide(titre="Tiago" year="2024" comment="python ROS2 based project, using a turtlebot3 we had to recreate a robocup challenge")
+      p we did a lot of stuff
+      p Lorem ipsum
+      p Lorem ipsum
+      p Lorem ipsum
+      p Lorem ipsum
+      p Lorem ipsum
+      p Lorem ipsum
+      p Lorem ipsum
+      p Lorem ipsum
+      p Lorem ipsum
+      p Lorem ipsum
+      p Lorem ipsum
+      p Lorem ipsum
+      p Lorem ipsum
+      p Lorem ipsum
+    ProjectSlide(titre="Dashboard" year="2024" comment="python ROS2 based project, using a turtlebot3 we had to recreate a robocup challenge")
+      p we did a lot of stuff
+      p Lorem ipsum
+      p Lorem ipsum
+      p Lorem ipsum
+      p Lorem ipsum
+      p Lorem ipsum
+      p Lorem ipsum
+      p Lorem ipsum
+      p Lorem ipsum
+      p Lorem ipsum
+      p Lorem ipsum
+      p Lorem ipsum
+      p Lorem ipsum
+      p Lorem ipsum
+      p Lorem ipsum
 </template>
 
 <script>
