@@ -1,5 +1,7 @@
 <template lang="pug">
   div(class="sidebar")
+    div(class="container")
+      img(src="../assets/Logo_ALB.png" alt="Logo_ALB.png" class="image")
     div(v-for="page in items" :key="page.path" class="sidebar-item")
       router-link(:to="page['path']")
         button {{ page['component'] }}
@@ -21,6 +23,17 @@ export default {
 </script>
 
 <style>
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  width: 75%;  /* Largeur */
+  height: auto;   /* Hauteur auto pour garder les proportions */
+}
+
 .sidebar {
   display: flex;
   flex-direction: column;
