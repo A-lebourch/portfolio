@@ -1,7 +1,7 @@
 <template lang="pug">
   div(style="display:flex; flex-direction:row;height: 98vh;")
     Sidebar(:items="menu")
-      a(href="https://www.linkedin.com/in/ton-profil" target="_blank")
+      a(href="https://www.linkedin.com/in/alexandre-le-bourch-945763203/" target="_blank")
         h1(class="fa-brands fa-linkedin-in")
       a(href="https://github.com/A-lebourch/portfolio" target="_blank")
         h1(class="fa-brands fa-github")
@@ -24,8 +24,8 @@ export default {
     return {
       menu:[
             { path: '/portfolio', name: 'Home'},
-            { path: '/portfolio/about', name: 'AboutView'},
-            { path: '/portfolio/test', name: 'TestView'}
+            { path: '/portfolio/about', name: 'Présentation'},
+            { path: '/portfolio/projects', name: 'Mes projets'}
           ]
     };
   },
