@@ -4,7 +4,7 @@
       img(src="../assets/Logo_ALB.png" alt="Logo_ALB.png" class="image")
     div(v-for="page in items" :key="page.path" class="sidebar-item")
       router-link(:to="page['path']")
-        button(:style="this.$route.path == page['path'] ? 'background-color: #3557b3' : ''") 
+        button(class="button" :style="this.$route.path == page['path'] ? 'background-color: #3557b3' : ''") 
           h3 {{ page['name'] }}
     div(class="container")
       slot
@@ -52,7 +52,7 @@ export default {
   margin: 10px 0;
 }
 
-button {
+.button {
   width: 100%;
   padding: 0.5rem;
   background-color: #1a1a1a;
