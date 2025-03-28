@@ -4,7 +4,7 @@
       img(src="../assets/Logo_ALB.png" alt="Logo_ALB.png" class="image")
     div(v-for="page in items" :key="page.path" class="sidebar-item")
       router-link(:to="page['path']")
-        button {{ page['component'] }}
+        button(:style="this.$route.path == page['path'] ? 'background-color: #3557b3' : ''") {{ page['component'] }}
 </template>
 
 <script>
