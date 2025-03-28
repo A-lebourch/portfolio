@@ -1,7 +1,7 @@
 <template lang="pug">
   div(style="display:flex; flex-direction:row;height: 98vh;")
     Sidebar(:items="menu")
-    Page(titre="Alexandre Le Bourch portfolio")
+    Page(titre="Alexandre Le Bourch")
       router-view
   
 </template>
