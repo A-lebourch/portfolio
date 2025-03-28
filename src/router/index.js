@@ -5,8 +5,8 @@ import TestView from '../views/TestView.vue'
 
 const routes = [
   { path: '/portfolio', component: HomeView },
-  { path: '/about', component: AboutView },
-  { path: '/test', component: TestView }
+  { path: '/portfolio/about', component: AboutView },
+  { path: '/portfolio/test', component: TestView }
 ]
 
 const router = createRouter({
