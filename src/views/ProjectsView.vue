@@ -71,5 +71,8 @@ export default {
 <style>
 .container_style {
   width: 98%;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
 }
 </style>

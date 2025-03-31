@@ -32,9 +32,9 @@ export default {
   width: 100%;
   height: 200px;
   overflow: auto;
-  border: 1px solid #ccc;
   padding: 10px;
   background-color: #ccc;
+  /* scrollbar-width: none; */
   color: black;
 }
 .info_container {

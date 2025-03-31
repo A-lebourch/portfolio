@@ -4,7 +4,7 @@
       img(src="../assets/Logo_ALB.png" alt="Logo_ALB.png" class="image")
     div(v-for="page in items" :key="page.path" class="sidebar-item")
       router-link(:to="page['path']")
-        button(class="button" :style="this.$route.path == page['path'] ? 'background-color: #3557b3' : ''") 
+        button(class="button" :style="this.$route.path == page['path'] ? 'background-color: var(--link-color)' : ''") 
           h3 {{ page['name'] }}
     div(class="container")
       slot
@@ -34,18 +34,20 @@ export default {
 }
 
 .image {
-  width: 75%;
+  width: 50%;
   height: auto;
 }
 
 .sidebar {
   display: flex;
   flex-direction: column;
-  background-color: #cccccc;
+  background-color: var(--gray);
   width: 10rem;
-  height: 100vh;
+  height: 90vh;
   padding: 1rem;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  margin-top: 2.5vh;
+  margin-left: 1.5rem;
+  border-radius: 1rem;
 }
 
 .sidebar-item {
@@ -54,15 +56,10 @@ export default {
 
 .button {
   width: 100%;
-  padding: 0.5rem;
-  background-color: #1a1a1a;
-  border: none;
   text-align: left;
-  cursor: pointer;
-  transition: background-color 0.3s;
 }
 
 button:hover {
-  background-color: #3557b3;
+  background-color: var(--link-color);
 }
 </style>
