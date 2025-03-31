@@ -1,7 +1,8 @@
 <template lang="pug">
   div(class="page_style")
     h1() {{ titre }}
-    slot
+    div(class="scroll")
+      slot
 </template>
 
 <script>
@@ -24,8 +25,9 @@ export default {
   display:flex;
   flex-direction: column;
   width: 100%;
-  width: 100%;
   height: 100%;
+}
+.scroll{
   overflow: auto;
 }
 </style>
