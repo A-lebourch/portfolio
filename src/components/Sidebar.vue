@@ -1,22 +1,20 @@
 <template lang="pug">
-  div(:class="expanded ? 'sidebar-open':'sidebar-closed'")
-    div(class="container")
-      img(src="../assets/Logo_ALB.png" alt="Logo_ALB.png" class="image")
-    button(@click="expanded=!expanded") test
-    div(v-if="expanded")
-      div(v-for="page in items" :key="page.path")
-        router-link(:to="page['path']")
-          //- button(class="button" :style="this.$route.path == page['path'] ? 'background-color: var(--link-color)' : ''") 
-          div(class="item_container")
-            h1(:class="page['icon']")
-            h3 {{ page['name'] }}
-    div(v-else)
-      div(v-for="page in items" :key="page.path" class="sidebar-item")
-        router-link(:to="page['path']")
-          div(class="item_container")
-            h1(:class="page['icon']")
-    div(class="container")
-      slot
+div(:class="expanded ? 'sidebar sidebar-open' : 'sidebar sidebar-closed'")
+  div(class="logo-container")
+    img(src="../assets/Logo_ALB.png" alt="Logo_ALB.png" class="logo")
+
+  button(@click="expanded = !expanded" class="toggle-button")
+    h1(v-if="!expanded" class="fa-solid fa-chevron-right")
+    h1(v-if="expanded" class="fa-solid fa-chevron-left")
+
+  div(class="menu")
+    div(v-for="page in items" :key="page.path" class="menu-item")
+      router-link(:to="page.path" class="menu-link")
+        h1(:class="page.icon" class="menu-icon" :style="this.$route['path']==page.path ? 'color: var(--link-color)':'color: var(--button-color)'")
+        span(v-if="expanded" class="menu-text") {{ page.name }}
+
+  div(class="slot")
+    slot
 </template>
 
 <script>
@@ -27,68 +25,101 @@ export default {
   },
   data() {
     return {
-      expanded:false, 
+      expanded: false,
     };
   },
-  computed: {},
-  mounted() {},
-  methods: {},
 };
 </script>
 
 <style>
-.item_container{
-  display: flex;
-  flex-direction: row;
-  overflow: visible;
-  justify-content: center;
-}
-.container {
+.sidebar {
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
-
-.image {
-  position: sticky;
-  top: 0px;
-  left: 0px;
-  width: 5rem;
-  height: auto;
+  background-color: var(--gray);
+  height: 90vh;
+  padding: 1rem;
+  margin: 2rem;
+  border-radius: 1rem;
+  transition: width 0.3s ease-in-out;
 }
 
 .sidebar-open {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--gray);
   width: 12rem;
-  height: 90vh;
-  padding: 1rem;
-  margin-top: 2.5vh;
-  margin-left: 1.5rem;
-  transition: 0.5s;
-  border-radius: 1rem;
 }
 
 .sidebar-closed {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--gray);
-  width: 5rem;
-  height: 90vh;
-  padding: 1rem;
-  margin-top: 2.5vh;
-  margin-left: 1.5rem;
-  transition: 0.5s;
-  border-radius: 1rem;
+  width: 4rem;
 }
 
-.button {
+.logo-container {
+  display: flex;
+  justify-content: center;
   width: 100%;
+  margin-bottom: 1rem;
+}
+
+.logo {
+  width: 3rem;
+  height: auto;
+}
+
+.toggle-button {
+  width: 100%;
+  background: transparent;
+  border-radius: 0.5rem;
+  color: var(--text-color);
+}
+
+.menu {
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.menu-item {
+  /* width: 100%; */
+}
+
+.menu-link {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.5rem;
+  margin: auto;
+  color: white;
+}
+
+.menu-icon {
+  margin-left: 0.25rem;
   text-align: left;
 }
 
-button:hover {
-  background-color: var(--link-color);
+.menu-text {
+  white-space: nowrap;
+  color: var(--text-color);
+  font-weight: bold;
+  font-size: x-large;
+  transition: opacity 0.3s ease-in-out, width 0.3s ease-in-out;
+}
+
+.sidebar-open .menu-text {
+  opacity: 1;
+  width: auto;
+}
+
+.sidebar-closed .menu-text {
+  opacity: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+.slot {
+  margin-top: auto;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 </style>
