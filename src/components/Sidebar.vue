@@ -38,7 +38,7 @@ export default {
   background-color: var(--gray);
   height: 90vh;
   padding: 1rem;
-  margin: 2rem;
+  margin: 1rem;
   border-radius: 1rem;
   transition: width 0.3s ease-in-out;
 }
