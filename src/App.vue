@@ -1,5 +1,5 @@
 <template lang="pug">
-  div(v-if="!isMobile" style="display:flex; flex-direction:row;height: 98vh;")
+  div(v-if="!isMobile" style="display:flex; flex-direction:row; height: 98vh;")
     Sidebar(:items="menu")
       a(href="https://www.linkedin.com/in/alexandre-le-bourch-945763203/" target="_blank")
         h1(class="fa-brands fa-linkedin-in")
@@ -9,7 +9,7 @@
     Page(titre="Alexandre Le Bourch")
       router-view
   
-  div(v-else style="display:flex; flex-direction:column;height: 90vh;")
+  div(v-else style="display: flex; flex-direction: column; height: 98vh;")
     Page(titre="Alexandre Le Bourch")
       router-view
 
@@ -39,7 +39,7 @@ export default {
             { path: '/portfolio/about', name: 'Présentation', icon:'fa-solid fa-user'},
             { path: '/portfolio/projects', name: 'Mes projets', icon:'fa-solid fa-diagram-project'}
           ],
-          isMobile: false,
+      isMobile: false,
     };
   },
   created() {
