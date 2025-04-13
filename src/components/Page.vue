@@ -23,14 +23,14 @@ export default {
 <style>
 .page_style {
   flex: 1;
-  overflow: hidden;
+  overflow: auto;
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
 }
 .scroll {
-  flex: 1;
-  overflow: auto;
+  /* flex: 1;
+  overflow: auto; */
 }
 </style>
