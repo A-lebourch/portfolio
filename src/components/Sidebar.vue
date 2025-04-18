@@ -53,9 +53,10 @@ export default {
 
 .logo-container {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   width: 100%;
   margin-bottom: 1rem;
+  margin-left: 0.75rem;
 }
 
 .logo {
@@ -119,8 +120,11 @@ export default {
 .slot {
   margin-top: auto;
   width: 100%;
-  text-align: center;
+  text-align: left;
+  /* background-color: red; */
   display: flex;
   flex-direction: column;
+  /* justify-content: left; */
+  margin-left: 1rem;
 }
 </style>
