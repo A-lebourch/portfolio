@@ -44,7 +44,7 @@ export default {
 }
 
 .sidebar-open {
-  width: 12rem;
+  width: 13rem;
 }
 
 .sidebar-closed {
@@ -107,6 +107,7 @@ export default {
 .sidebar-open .menu-text {
   opacity: 1;
   width: auto;
+  overflow: hidden;
 }
 
 .sidebar-closed .menu-text {
