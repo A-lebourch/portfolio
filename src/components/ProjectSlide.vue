@@ -1,10 +1,10 @@
 <template lang="pug">
-  div(:class="slide_open ? 'SlideOpen':'SlideClose'" class="scroll-container")
+  div(:class="slide_open ? 'SlideOpen' : 'SlideClose'" class="scroll-container")
     div(class="info_container")
-      button(@click="slide_open = !slide_open" :class="slide_open ? 'fa-solid fa-chevron-up':'fa-solid fa-chevron-down'")
+      button(@click="slide_open = !slide_open" :class="slide_open ? 'fa-solid fa-chevron-up' : 'fa-solid fa-chevron-down'")
       h1 {{ titre }}
       h2 {{ year }}
-    h3 {{ comment }}
+    h3(v-if="!isMobile || slide_open") {{ comment }}
     slot(v-if="slide_open")
 </template>
 
@@ -19,18 +19,30 @@ export default {
   data() {
     return {
       slide_open: false,
+      isMobile: false,
     };
+  },
+  methods: {
+    checkMobile() {
+      this.isMobile = window.matchMedia("(max-width: 600px)").matches;
+    },
+  },
+  mounted() {
+    this.checkMobile();
+    window.addEventListener("resize", this.checkMobile);
+  },
+  beforeDestroy() {
+    window.removeEventListener("resize", this.checkMobile);
   },
 };
 </script>
 
 <style>
 .scroll-container {
-  width: 100%;
   height: 200px;
-  overflow: auto;
+  overflow: hidden;
   padding: 1rem; 
-  background-color: #ccc;
+  background-color: var(--gray);
   color: black;
 }
 
@@ -43,7 +55,7 @@ export default {
 }
 
 .SlideOpen {
-  outline: 5px solid gray;
+  outline: 2px solid var(--gray-outline);
   border-radius: 5px;
   padding: 0.5rem;
   height: 25rem;
@@ -51,7 +63,7 @@ export default {
   transition: height 0.3s ease;
 }
 .SlideClose {
-  outline: 5px solid gray;
+  outline: 2px solid var(--gray-outline);
   border-radius: 5px;
   margin: 0.5rem;
   padding: 0.5rem;
@@ -60,15 +72,6 @@ export default {
 }
 
 @media (max-width: 600px) {
-  .scroll-container {
-    padding: 0.5rem;
-    height: auto;
-  }
-  .info_container {
-    flex-direction: column;
-    gap: 1rem;
-    align-items: flex-start;
-  }
   .SlideOpen {
     height: auto;
     padding: 0.5rem;
@@ -77,8 +80,5 @@ export default {
     height: auto;
     padding: 0.5rem;
   }
-  /* h1, h2, h3, button {
-    font-size: 1rem;
-  } */
 }
 </style>

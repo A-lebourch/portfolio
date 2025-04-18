@@ -53,7 +53,7 @@ export default {
   mounted(){},
   methods: {
     checkMobile() {
-      this.isMobile = window.matchMedia("(max-width: 768px)").matches;
+      this.isMobile = window.matchMedia("(max-width: 600px)").matches;
     },
   },
 };
