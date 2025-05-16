@@ -35,7 +35,7 @@ export default {
 .sidebar {
   display: flex;
   flex-direction: column;
-  background-color: var(--gray);
+  background-color: var(--gray-outline);
   height: 90vh;
   padding: 1rem;
   margin: 1rem;
@@ -72,15 +72,10 @@ export default {
 }
 
 .menu {
-  justify-self: center;
   display: flex;
   flex-direction: column;
   width: 100%;
   gap: 0.5rem;
-}
-
-.menu-item {
-  /* width: 100%; */
 }
 
 .menu-link {
@@ -89,7 +84,7 @@ export default {
   gap: 0.8rem;
   padding: 0.5rem;
   margin: auto;
-  color: white;
+  color: var(--text-color);
 }
 
 .menu-icon {
@@ -120,11 +115,8 @@ export default {
 .slot {
   margin-top: auto;
   width: 100%;
-  text-align: left;
-  /* background-color: red; */
   display: flex;
   flex-direction: column;
-  /* justify-content: left; */
   margin-left: 1rem;
 }
 </style>

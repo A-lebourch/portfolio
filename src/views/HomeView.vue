@@ -13,7 +13,7 @@
 <style>
 .download-contact {
   padding: 0.5rem 1rem;
-  background-color: var(--link-color);
+  background-color: var(--primary-color);
   color: white;
   border: none;
   border-radius: 0.5rem;
@@ -21,6 +21,6 @@
   font-weight: bold;
 }
 .download-contact:hover {
-  background-color: var(--button-color);
+  background-color: var(--accent-color);
 }
 </style>

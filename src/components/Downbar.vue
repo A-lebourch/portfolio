@@ -24,7 +24,7 @@ export default {
 }
 
 .downbar-style {
-  background-color: var(--gray);
+  background-color: var(--gray-outline);
   width: 100%;
   display: flex;
   flex-direction: row;

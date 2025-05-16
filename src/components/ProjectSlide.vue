@@ -42,8 +42,8 @@ export default {
   height: 200px;
   overflow: hidden;
   padding: 1rem; 
-  background-color: var(--gray);
-  color: black;
+  background-color: var(--gray-outline);
+  color: var(--text-color);
 }
 
 .info_container {

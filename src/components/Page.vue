@@ -28,9 +28,11 @@ export default {
   flex-direction: column;
   width: 100%;
   height: 100%;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
+
 .scroll {
-  /* flex: 1;
-  overflow: auto; */
+  /* Ajouter ici des styles si besoin */
 }
 </style>
