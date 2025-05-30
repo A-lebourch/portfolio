@@ -22,11 +22,13 @@ export default {
 
 <style>
 .page_style {
+  padding-left: 2.5%;
+  padding-right: 2.5%;
   flex: 1;
   overflow: auto;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 95%;
   height: 100%;
   background-color: var(--background-color);
   color: var(--text-color);
