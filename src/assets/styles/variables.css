@@ -1,9 +1,10 @@
 :root {
   /* Palette techno-industrielle */
+  /* --primary-color: #2661E4;          Accent orange industriel */
   --accent-color: #FF5722;          /* Accent orange industriel */
+  --primary-color: #FFC107;            /* Jaune doré pour les liens */
   --text-color: #D3D3D3;            /* Texte clair sur fond foncé */
   --background-color: #2E2E2E;      /* Fond principal charbon */
-  --primary-color: #FFC107;            /* Jaune doré pour les liens */
   --gray-outline: #9E9E9E;          /* Gris pour contours */
 
   /* Typographie */
