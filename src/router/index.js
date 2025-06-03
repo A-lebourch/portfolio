@@ -4,9 +4,9 @@ import AboutView from '../views/AboutView.vue'
 import ProjectsView from '../views/ProjectsView.vue'
 
 const routes = [
-  { path: '/portfolio', component: HomeView },
-  { path: '/portfolio/about', component: AboutView },
-  { path: '/portfolio/projects', component: ProjectsView }
+  { path: '/', component: HomeView },
+  { path: '/about', component: AboutView },
+  { path: '/projects', component: ProjectsView }
 ]
 
 const router = createRouter({

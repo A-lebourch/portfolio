@@ -24,9 +24,9 @@ export default {
   data() {
     return {
       menu:[
-            { path: '/portfolio/', name: 'Home', icon:'fa-solid fa-house'},
-            { path: '/portfolio/about', name: 'Présentation', icon:'fa-solid fa-user'},
-            { path: '/portfolio/projects', name: 'Mes projets', icon:'fa-solid fa-diagram-project'}
+            { path: '/', name: 'Home', icon:'fa-solid fa-house'},
+            { path: '/about', name: 'Présentation', icon:'fa-solid fa-user'},
+            { path: '/projects', name: 'Mes projets', icon:'fa-solid fa-diagram-project'}
           ],
       isMobile: false,
     };
