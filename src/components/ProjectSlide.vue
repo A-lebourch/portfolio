@@ -1,11 +1,10 @@
 <template lang="pug">
-  div(:class="slide_open ? 'SlideOpen' : 'SlideClose'" class="scroll-container")
+  div(class="Slide")
     div(class="info_container")
-      button(@click="slide_open = !slide_open" :class="slide_open ? 'fa-solid fa-chevron-up' : 'fa-solid fa-chevron-down'")
+      button(@click="goToProject" class="fa-solid fa-arrow-right")
       h1 {{ titre }}
       h2 {{ year }}
-    h3(v-if="!isMobile || slide_open") {{ comment }}
-    slot(v-if="slide_open")
+    h3 {{ comment }}
 </template>
 
 <script>
@@ -15,37 +14,17 @@ export default {
     titre: { type: String, required: true },
     year: { type: String, required: true },
     comment: { type: String, required: false },
-  },
-  data() {
-    return {
-      slide_open: false,
-      isMobile: false,
-    };
+    route: { type: String, required: true },
   },
   methods: {
-    checkMobile() {
-      this.isMobile = window.matchMedia("(max-width: 600px)").matches;
+    goToProject() {
+      this.$router.push(this.route);
     },
-  },
-  mounted() {
-    this.checkMobile();
-    window.addEventListener("resize", this.checkMobile);
-  },
-  beforeDestroy() {
-    window.removeEventListener("resize", this.checkMobile);
   },
 };
 </script>
 
 <style>
-.scroll-container {
-  height: 200px;
-  overflow: hidden;
-  padding: 1rem; 
-  background-color: var(--gray-outline);
-  color: var(--text-color);
-}
-
 .info_container {
   display: flex;
   flex-direction: row;
@@ -54,29 +33,17 @@ export default {
   align-items: center;
 }
 
-.SlideOpen {
+.Slide {
   outline: 2px solid var(--gray-outline);
   border-radius: 5px;
-  padding: 0.5rem;
-  height: 25rem;
-  margin: 0.5rem;
-  transition: height 0.3s ease;
-}
-.SlideClose {
-  outline: 2px solid var(--gray-outline);
-  border-radius: 5px;
-  margin: 0.5rem;
   padding: 0.5rem;
   height: 10rem;
-  transition: height 0.3s ease;
+  width: 45%;
+  background-color: var(--gray-outline);
 }
 
 @media (max-width: 600px) {
-  .SlideOpen {
-    height: auto;
-    padding: 0.5rem;
-  }
-  .SlideClose {
+  .Slide {
     height: auto;
     padding: 0.5rem;
   }

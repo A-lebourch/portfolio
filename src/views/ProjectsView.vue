@@ -1,53 +1,23 @@
 <template lang="pug">
   div(class="container_style")
-    ProjectSlide(titre="TurtleBot" year="2024" comment="python ROS2 based project, using a turtlebot3 we had to recreate a robocup challenge")
-      p we did a lot of stuff
-      p Lorem ipsum
-      p Lorem ipsum
-      p Lorem ipsum
-      p Lorem ipsum
-      p Lorem ipsum
-      p Lorem ipsum
-      p Lorem ipsum
-      p Lorem ipsum
-      p Lorem ipsum
-      p Lorem ipsum
-      p Lorem ipsum
-      p Lorem ipsum
-      p Lorem ipsum
-      p Lorem ipsum
-    ProjectSlide(titre="Tiago" year="2024" comment="python ROS2 based project, using a turtlebot3 we had to recreate a robocup challenge")
-      p we did a lot of stuff
-      p Lorem ipsum
-      p Lorem ipsum
-      p Lorem ipsum
-      p Lorem ipsum
-      p Lorem ipsum
-      p Lorem ipsum
-      p Lorem ipsum
-      p Lorem ipsum
-      p Lorem ipsum
-      p Lorem ipsum
-      p Lorem ipsum
-      p Lorem ipsum
-      p Lorem ipsum
-      p Lorem ipsum
-    ProjectSlide(titre="Dashboard" year="2024" comment="python ROS2 based project, using a turtlebot3 we had to recreate a robocup challenge")
-      p we did a lot of stuff
-      p Lorem ipsum
-      p Lorem ipsum
-      p Lorem ipsum
-      p Lorem ipsum
-      p Lorem ipsum
-      p Lorem ipsum
-      p Lorem ipsum
-      p Lorem ipsum
-      p Lorem ipsum
-      p Lorem ipsum
-      p Lorem ipsum
-      p Lorem ipsum
-      p Lorem ipsum
-      p Lorem ipsum
+    ProjectSlide(
+      titre="TurtleBot"
+      year="2024"
+      comment="python ROS2 based project, using a turtlebot3 we had to recreate a robocup challenge"
+      route="/projects/turtlebot"
+    )
+    ProjectSlide(
+      titre="Tiago"
+      year="2024"
+      comment="python ROS2 based project, using a turtlebot3 we had to recreate a robocup challenge"
+      route="/projects/tiago"
+    )
+    ProjectSlide(
+      titre="Dashboard"
+      year="2024"
+      comment="python ROS2 based project, using a turtlebot3 we had to recreate a robocup challenge"
+      route="/projects/dashboard"
+    )
 </template>
 
 <script>
@@ -73,7 +43,8 @@ export default {
   width: 98%;
   height: 98%;
   display: flex;
-  flex-direction: column;
+  flex-direction: grow;
+  flex-wrap: wrap;
   gap: 5rem;
 }
 </style>
