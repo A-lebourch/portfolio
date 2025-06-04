@@ -16,7 +16,7 @@
 }
 
 h2, h3, h4, h5 {
-  font-family: var(--title-font);
+  font-family: var(--body-font);
   color: var(--text-color);
   margin-bottom: 1rem;
 }
