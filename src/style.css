@@ -3,14 +3,6 @@
 
 :root {
   font-family: var(--body-font);
-  font-weight: 400;
-  line-height: 1.6;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color-scheme: dark;
-
   background-color: var(--background-color);
   color: var(--text-color);
 }
@@ -18,7 +10,6 @@
 h2, h3, h4, h5 {
   font-family: var(--body-font);
   color: var(--text-color);
-  margin-bottom: 1rem;
 }
 
 h1 {
@@ -29,6 +20,7 @@ h1 {
 
 p, ul, li {
   font-size: 1rem;
+  font-family: var(--body-font);
   color: var(--text-color);
 }
 
@@ -49,7 +41,7 @@ button {
   padding: 0.6em 1.2em;
   border: none;
   border-radius: 8px;
-  background-color: var(--gray-outline);
+  background-color: var(--primary-color);
   color: var(--text-color);
   cursor: pointer;
   transition: background-color 0.3s ease;

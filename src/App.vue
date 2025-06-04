@@ -1,6 +1,6 @@
 <template lang="pug">  
   div(style="display: flex; flex-direction: column; height: 98vh;")
-    Page(titre="Alexandre Le Bourch")
+    Page(titre="Portfolio")
       router-view
 
     Downbar(:items="menu")
