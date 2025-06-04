@@ -24,7 +24,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .info_container {
   display: flex;
   flex-direction: row;
@@ -40,12 +40,35 @@ export default {
   height: 10rem;
   width: 45%;
   background-color: var(--gray-outline);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1rem auto;
+  word-break: break-word;
+}
+
+@media (max-width: 900px) {
+  .Slide {
+    width: 90%;
+    height: auto;
+    padding: 1rem;
+  }
+  .info_container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
 }
 
 @media (max-width: 600px) {
   .Slide {
     height: auto;
-    padding: 0.5rem;
+    padding: 1rem 0.5rem;
+  }
+  .info_container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
   }
 }
 </style>

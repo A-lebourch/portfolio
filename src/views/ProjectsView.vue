@@ -41,10 +41,12 @@ export default {
 <style>
 .container_style {
   width: 98%;
-  height: 98%;
+  min-height: 98%;
   display: flex;
-  flex-direction: grow;
   flex-wrap: wrap;
-  gap: 5rem;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+  box-sizing: border-box;
 }
 </style>
