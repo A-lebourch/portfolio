@@ -15,7 +15,13 @@
   color: var(--text-color);
 }
 
-h1, h2, h3, h4, h5 {
+h2, h3, h4, h5 {
+  font-family: var(--title-font);
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+h1 {
   font-family: var(--title-font);
   color: var(--primary-color);
   margin-bottom: 1rem;

@@ -1,13 +1,13 @@
 :root {
-  /* Palette techno-industrielle */
-  /* --primary-color: #2661E4;          Accent orange industriel */
-  --accent-color: #FF5722;          /* Accent orange industriel */
-  --primary-color: #FFC107;            /* Jaune doré pour les liens */
-  --text-color: #D3D3D3;            /* Texte clair sur fond foncé */
-  --background-color: #2E2E2E;      /* Fond principal charbon */
-  --gray-outline: #9E9E9E;          /* Gris pour contours */
+  --primary-color: #2c99f1;
+  --accent-color: #1664a3;
+  --warning-color: #FFC107;
 
-  /* Typographie */
+  --background-color: #1C1F26;
+  --surface-color: #2E3A59;
+  --text-color: #E0E0E0;
+  --gray-outline: #a4acb1;
+
   --title-font: 'Orbitron', sans-serif;
   --body-font: 'Exo 2', sans-serif;
 }
