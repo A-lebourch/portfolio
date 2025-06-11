@@ -1,4 +1,6 @@
 <template lang="pug">
+  H2 Dashboard Project
+  H3 Projet en cours de développement
 </template>
 
 <script>

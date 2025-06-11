@@ -5,7 +5,9 @@
 
       div(v-for="page in items" :key="page.path" class="menu-style")
         router-link(:to="page.path")
-          h1(:class="page.icon" 
+          h1(v-if="page.path != '/'" :class="page.icon" 
+            :style="this.$route['path'].includes(page.path) ? 'color: var(--accent-color)' : 'color: var(--button-color)'")
+          h1(v-if="page.path == '/'" :class="page.icon" 
             :style="this.$route['path'] == page.path ? 'color: var(--accent-color)' : 'color: var(--button-color)'")
       slot
 </template>
