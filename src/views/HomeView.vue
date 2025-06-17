@@ -27,26 +27,26 @@
     a(href="contact.vcf" download class="download-contact")
       button.download-contact Télécharger mon contact
 
-    div(class="contact-form")
-      h2 Contactez moi !
+    //- div(class="contact-form")
+    //-   h2 Contactez moi !
 
-      form(@submit.prevent="sendEmail" ref="form")
-        div
-          p(for="name") Nom Prenom
-          input(type="text" id="name" name="name" v-model="name" required)
+    //-   form(@submit.prevent="sendEmail" ref="form")
+    //-     div
+    //-       p(for="name") Nom Prenom
+    //-       input(type="text" id="name" name="name" v-model="name" required)
 
-        div
-          p(for="email") Email
-          input(type="email" id="email" name="email" v-model="email" required)
+    //-     div
+    //-       p(for="email") Email
+    //-       input(type="email" id="email" name="email" v-model="email" required)
 
-        div
-          p(for="message") Message
-          textarea(id="message" name="message" v-model="message" required)
-        div(style="display: flex; justify-content: center; margin-top: 1rem;")
-          button(type="submit") Envoyer
+    //-     div
+    //-       p(for="message") Message
+    //-       textarea(id="message" name="message" v-model="message" required)
+    //-     div(style="display: flex; justify-content: center; margin-top: 1rem;")
+    //-       button(type="submit") Envoyer
 
-      p(v-if="status === 'sent'") ✅ Message envoyé avec succès !
-      p(v-if="status === 'error'") ❌ Une erreur est survenue. Réessaie plus tard.
+    //-   p(v-if="status === 'sent'") ✅ Message envoyé avec succès !
+    //-   p(v-if="status === 'error'") ❌ Une erreur est survenue. Réessaie plus tard.
 </template>
 
 
