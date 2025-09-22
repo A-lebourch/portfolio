@@ -4,7 +4,7 @@
       router-view
 
     Downbar(:items="menu")
-      div(v-if="!isMobile" class="socials")
+      div(class="socials")
         a(href="https://www.linkedin.com/in/alexandre-le-bourch-945763203/" target="_blank")
           h1(class="fa-brands fa-linkedin-in")
         a(href="https://github.com/A-lebourch/portfolio" target="_blank")
@@ -24,9 +24,7 @@ export default {
   data() {
     return {
       menu:[
-            { path: '/', name: 'Home', icon:'fa-solid fa-house'},
-            { path: '/about', name: 'Présentation', icon:'fa-solid fa-user'},
-            { path: '/projects', name: 'Mes projets', icon:'fa-solid fa-diagram-project'}
+            { path: '/', name: 'Home', icon:'fa-solid fa-house'}
           ],
       isMobile: false,
     };
@@ -57,7 +55,7 @@ export default {
   height: 4.5rem;
   display: flex;
   justify-content: center;
-  margin-right: 1rem;
+  margin: 1rem;
   justify-content: space-evenly;
   }
 </style>

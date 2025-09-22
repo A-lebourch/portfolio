@@ -1,90 +1,42 @@
 <template lang="pug">
-  div.home-content
-    h2 Bienvenue sur mon site !
-    p
-      | Je m'appelle Alexandre, j'ai 22 ans et je suis étudiant en M2 Systèmes embarqués à Ynov Bordeaux.
-      br
-      | Ce projet a pour but de créer un site web de A à Z, afin de présenter les projets réalisés durant mes études et mon temps libre.
-    p
-      | Je ne suis pas développeur web de formation, mais je souhaite partager mes réalisations et mes compétences à travers ce site.
-      br
-      | Merci de votre indulgence si tout n'est pas parfait, j'essaye de faire de mon mieux !
-    p
-      | Pour toute question ou suggestion, n'hésitez pas à me contacter.
-      br
-      | Vous pouvez m'envoyer un mail via le formulaire en bas de page ou télécharger ma carte de visite en cliquant sur le bouton ci-dessous.
-    p
-      | Bonne visite sur mon site !
-      br
-      | Suivez-moi sur les réseaux sociaux pour rester informé des mises à jour, ou sur GitHub pour consulter le code source.
-    hr
-    h1 Développement en cours !
-    p
-      | Ce site est en constante évolution, avec de nouvelles fonctionnalités et projets ajoutés régulièrement.
-      br
-      | N'hésitez pas à revenir souvent pour découvrir les dernières nouveautés !
-    
-    a(href="contact.vcf" download class="download-contact")
-      button.download-contact Télécharger mon contact
+  div(style="display: grid; grid-template-columns: repeat(9, 1fr); align-items: center; height:100%; width:100%;")
+    div(style="grid-column: span 2; display:flex; flex-direction:column; margin-right:2rem; gap:2rem")
+      button(@click="this.$router.push('/work_experience')" class="") Experience professionnel
+      button(@click="this.$router.push('/projects')" class="") Projet réalisés
+      button(@click="this.$router.push('/about')" class="") Mes hobbies
+      button(@click="this.$router.push('/in_progress')" class="") A venir
 
-    //- div(class="contact-form")
-    //-   h2 Contactez moi !
+    div(style="grid-column: span 4;")
+      p Bienvenue sur mon site !
+      p Ce projet a pour but de créer un site web de A à Z, afin de présenter les projets réalisés durant mes études et mon temps libre.
+      hr
+      p Je ne suis pas développeur web de formation, mais je souhaite partager mes réalisations et mes compétences à travers ce site.
+      p Merci de votre indulgence si tout n'est pas parfait, j'essaye de faire de mon mieux !
+      hr
+      p Je suis Alexandre Le Bourch, 22 ans, étudiant en Mastère 2 en Mécatronique et systèmes embarqués a Ynov Bordeaux.
+      p J'imagine que si vous êtes sur ce site c'est pour plus en savoir sur moi ?
+      p Pour mieux vous aiguiller sur vos recherches je vous invite a choisir une des catégorie a gauche pour en savoir plus
+      p Si vous souhaitez en savoir plus sur moi ou que vous voulez convenir d'un rendez-vous, je vous invite à télécharger ma fiche de contacte via le bouton en haut a droite.
 
-    //-   form(@submit.prevent="sendEmail" ref="form")
-    //-     div
-    //-       p(for="name") Nom Prenom
-    //-       input(type="text" id="name" name="name" v-model="name" required)
+    div(style="grid-column: span 3;")
+      div(style="height: 70vh; " )
+        embed(
+          src="/CV_Alexandre-Le-Bourch.pdf#zoom=50",
+          type="application/pdf",
+          width="100%",
+          height="100%"
+        )
 
-    //-     div
-    //-       p(for="email") Email
-    //-       input(type="email" id="email" name="email" v-model="email" required)
-
-    //-     div
-    //-       p(for="message") Message
-    //-       textarea(id="message" name="message" v-model="message" required)
-    //-     div(style="display: flex; justify-content: center; margin-top: 1rem;")
-    //-       button(type="submit") Envoyer
-
-    //-   p(v-if="status === 'sent'") ✅ Message envoyé avec succès !
-    //-   p(v-if="status === 'error'") ❌ Une erreur est survenue. Réessaie plus tard.
 </template>
 
 
 <script>
-import emailjs from 'emailjs-com';
-
 export default {
   name: 'about',
   data() {
-    return {
-      isOpen: false,
-      name: '',
-      email: '',
-      message: '',
-      status: '',
-    };
+    return {};
   },
-  methods: {
-    sendEmail() {
-      emailjs
-        .sendForm(
-          import.meta.env.VITE_EMAILJS_SERVICE_ID,
-          import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-          this.$refs.form,
-          import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-        )
-        .then(() => {
-          this.status = 'sent';
-          this.name = '';
-          this.email = '';
-          this.message = '';
-        })
-        .catch((error) => {
-          console.error(error);
-          this.status = 'error';
-        });
-    },
-  },
+  methods: {},
 };
 </script>
 

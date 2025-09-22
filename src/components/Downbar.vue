@@ -23,15 +23,7 @@ export default {
 
 <style>
 .downbar-container {
-  width: 50%;
-  display: flex;
-  place-self: center;
-  padding: 0.5rem;
-  flex-shrink: 0;
-}
-
-.downbar-container {
-  width: 50%;
+  width: 30%;
   display: flex;
   place-self: center;
   padding: 0.5rem;
