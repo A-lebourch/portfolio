@@ -1,21 +1,34 @@
 <template lang="pug">
   div(class="container_style")
     ProjectSlide(
-      titre="TurtleBot"
-      year="2024"
-      comment="python ROS2 based project, using a turtlebot3 we had to recreate a robocup challenge"
-      route="/projects/turtlebot"
+      titre="Ornithoptère"
+      year="2024-2025"
+      comment="à remplir"
+      route="/projects/ornithoptere"
+      :skills=['Vue.js', 'JavaScript', 'CSS']
+    )
+    ProjectSlide(
+      titre="Portfolio"
+      year="2025"
+      comment="à remplir"
+      route="/projects/portfolio"
     )
     ProjectSlide(
       titre="Tiago"
-      year="2024"
-      comment="python ROS2 based project, using a turtlebot3 we had to recreate a robocup challenge"
+      year="2025"
+      comment="à remplir"
       route="/projects/tiago"
     )
     ProjectSlide(
-      titre="Dashboard"
+      titre="TurtleBot"
       year="2024"
-      comment="python ROS2 based project, using a turtlebot3 we had to recreate a robocup challenge"
+      comment="à remplir"
+      route="/projects/turtlebot"
+    )
+    ProjectSlide(
+      titre="Dashboard"
+      year="2025"
+      comment="à remplir"
       route="/projects/dashboard"
     )
 </template>
